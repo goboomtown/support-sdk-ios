@@ -20,12 +20,6 @@
     [super viewDidLoad];
     self.title = @"Support SDK Demo";
     
-#ifdef STAGE
-    self.configFileName = @"support_sdk_preprod.json";
-#else
-    self.configFileName = @"support_sdk.json";
-#endif
-    
     CGFloat buttonSize = 75;
     CGRect buttonFrame = CGRectMake((self.view.frame.size.width-buttonSize)/2,
                                     (self.view.frame.size.height-buttonSize)/2,
@@ -33,63 +27,13 @@
                                     buttonSize);
 	self.supportButton = [[SupportButton alloc] initWithFrame:buttonFrame];
 	self.supportButton.delegate = self;
-//    if ( ![self.supportButton loadConfigurationFile:self.configFileName customerId:nil] ) {
-//        NSLog(@"Unable to load configuration file");
-//    }
+    if ( ![self.supportButton loadConfigurationFile:@"CONFIGURATION FILE NAME" customerId:nil] ) {
+        NSLog(@"Unable to load configuration file");
+    }
     [self.view addSubview:self.supportButton];
     
     [self.supportButton advertiseServiceWithPublicData:@{@"test":@"data"}
                                            privateData:@{@"test":@"private data"}];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    self.proactiveAgent = [[SupportSDKProactive alloc] initWithConfigurationFile:self.configFileName customerId:nil];
-    [self.proactiveAgent putAppHealthCheck:@"app-running"   checkStatus:OK          checkStatusDetail:@""];
-    [self.proactiveAgent putAppHardwareCheck:@"cc-scanner"  checkStatus:CRITICAL    checkStatusDetail:@"device offline"];
-    [self.proactiveAgent putAppCloudCheck:@"merchant-ep"    checkStatus:WARNING     checkStatusDetail:@"HTTP status code 401"];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"testfile" ofType:nil];
-    NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:filePath];
-    [self.proactiveAgent putAppDumpCheckWithFile:file checkStatus:OK checkStatusDetail:@""];
-    
-    [self promptForCustomerInformation];
-}
-
-
-- (void) promptForCustomerInformation
-{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Login with Email Address", nil)
-                                                                    message:NSLocalizedString(@"This is optional. Just hit cancel if you wish.", nil)
-                                                             preferredStyle:UIAlertControllerStyleAlert];
-
-    UIAlertAction *login = [UIAlertAction actionWithTitle:NSLocalizedString(@"Login", nil)
-                                                    style:UIAlertActionStyleDefault
-                                                   handler:^(UIAlertAction * action) {
-
-                                                       if (alert.textFields.count > 0) {
-                                                           UITextField *textField = [alert.textFields firstObject];
-                                                           if ( ![self.supportButton loadConfigurationFile:self.configFileName customerId:textField.text] ) {
-                                                               NSLog(@"Unable to load configuration file");
-                                                           }
-                                                       }
-                                                   }];
-
-    [alert addAction:login];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil)
-                                                           style:UIAlertActionStyleCancel
-                                                         handler:^(UIAlertAction * _Nonnull action) {
-        if ( ![self.supportButton loadConfigurationFile:self.configFileName customerId:nil] ) {
-            NSLog(@"Unable to load configuration file");
-        }
-    }];
-                                                                                             [alert addAction:cancelAction];
-
-    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.placeholder = NSLocalizedString(@"Enter email address", nil); // if needs
-    }];
-
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
