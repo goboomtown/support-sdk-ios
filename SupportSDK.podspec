@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   # s.source       = { :http    => "" }
   s.source       = { :git => "https://github.com/goboomtown/support-sdk-ios.git", :tag => "#{s.version}" }
   s.libraries             = "c++"
-  s.public_header_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
-  s.source_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
+  # s.public_header_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
+  # s.source_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
   s.vendored_frameworks = "SupportSDK/SupportSDK.framework"
   s.requires_arc          = true
   s.xcconfig              = { 'OTHER_LDFLAGS' => '-ObjC' }

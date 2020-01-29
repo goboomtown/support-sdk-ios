@@ -91,14 +91,14 @@ IB_DESIGNABLE
 
  @return    YES if configuration was successfully loaded, NO if not
  */
-- (BOOL) loadConfigurationFile:(NSString *)configFileName customerId:(NSString *)customerId;
+- (BOOL) loadConfigurationFile:(nonnull NSString *)configFileName customerId:(nullable NSString *)customerId;
 
 /**
 Retrieve and load the desired customer into the Support SDK. This must me done after the settings have been retrieved
 
 @param     customerInformation       a dictionary of possible keys (i.e. customer_email) and values (i.e. an email address)
 */
-- (void) getCustomerWithInformation:(NSDictionary *)customerInformation;
+- (void) getCustomerWithInformation:(nullable NSDictionary *)customerInformation;
 
 /**
  Advertise the Support SDK service via mDNS
