@@ -1,4 +1,4 @@
-# Boomtown Support SDK for iOS (v 1.0)
+# Boomtown Support SDK for iOS (v 1.0.0)
 
 #### Minimum Requirements
 - Xcode 10.2
@@ -42,7 +42,7 @@ The downloaded configuration file may be renamed if desired and should be dragge
 
 ## Usage
 
-_Note:_ Objective-C and Swift examples may be found in the `Examples` folder of this repository
+_Note:_ Objective-C and Swift examples may be found in the `SupportSDK/Examples` folder of this repository
 
 ### Objective-C
 ```Objective-C
