@@ -9,7 +9,7 @@ platform :ios, '9.0'
 target 'SupportSDKDemo' do
   use_frameworks!
 
-  pod 'SupportSDK', :path => './SupportSDK'
+pod 'SupportSDK', :path => '.'
 #  pod 'AFNetworking', '~> 3.0'
 #  pod 'XMPPFramework', '~> 4.0'
 #  pod 'SVProgressHUD'

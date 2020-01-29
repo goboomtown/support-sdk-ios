@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SupportSDK"
-  s.version      = "1.0.0"
+  s.version      = "0.9.0"
   s.summary      = "Boomtown Support SDK"
   s.description  = "The Boomtown Product Support Platform SDK lets you embed a complete product support platform in your iOS applications."
   s.homepage     = "https://developers.goboomtown.com"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   }
   s.author       = { "Larry Borsato" => "lborsato@goboomtown.com" }
   # s.source       = { :http    => "" }
-  s.source       = { :https => "https://github.com/goboomtown/support-sdk-ios.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/goboomtown/support-sdk-ios.git", :tag => "#{s.version}" }
   s.libraries             = "c++"
   s.public_header_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
   s.source_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
