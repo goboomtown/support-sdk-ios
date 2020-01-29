@@ -2,18 +2,20 @@ Pod::Spec.new do |s|
   s.name         = "SupportSDK"
   s.version      = "1.0.0"
   s.summary      = "Boomtown Support SDK"
-  s.description  = "The Boomtown Support SDK lets you embed a complete product support platform in your iOS apps."
-  s.homepage     = "http://www.goboomtown.com"
+  s.description  = "The Boomtown Product Support Platform SDK lets you embed a complete product support platform in your iOS applications."
+  s.homepage     = "https://developers.goboomtown.com"
   s.platform     = :ios, "9.0"
   s.license      = {
     :type => "Commercial",
     :text => "Copyright 2020 Boomtown. All rights reserved."
   }
-  s.author       = { "Boomtown" => "help@goboomtown.com" }
+  s.author       = { "Larry Borsato" => "lborsato@goboomtown.com" }
   # s.source       = { :http    => "" }
-  s.source           = { :path => "../BoomtownAPI", :tag => s.version.to_s }
+  s.source       = { :https => "https://github.com/goboomtown/support-sdk-ios.git", :tag => "#{s.version}" }
   s.libraries             = "c++"
-  s.vendored_frameworks   = "SupportSDK.framework"
+  s.public_header_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
+  s.source_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
+  s.vendored_frameworks = "SupportSDK/SupportSDK.framework"
   s.requires_arc          = true
   s.xcconfig              = { 'OTHER_LDFLAGS' => '-ObjC' }
   s.dependency 'AFNetworking', '~> 3.0'
