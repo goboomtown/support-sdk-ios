@@ -9,7 +9,8 @@ platform :ios, '9.0'
 target 'SupportSDKDemo' do
   use_frameworks!
 
-pod 'SupportSDK', :path => '.'
+# pod 'SupportSDK', :path => '.'
+pod 'SupportSDK', '~> 0.9.0'
 #  pod 'AFNetworking', '~> 3.0'
 #  pod 'XMPPFramework', '~> 4.0'
 #  pod 'SVProgressHUD'
@@ -17,4 +18,3 @@ pod 'SupportSDK', :path => '.'
 #  pod 'iOS-Color-Picker'
 #  pod 'MTBBarcodeScanner'
 end
-

@@ -13,7 +13,7 @@
 - MTBBarcodeScanner
 
 
-A Podfile is included in case you want to use CocoaPods. If so, Support SDK will include these dependencies.
+A Podfile is included in case you want to use CocoaPods. If so, Support SDK will include these dependencies. The Support SDK CocoaPod can be found at https://cocoapods.org/pods/SupportSDK.
 
 ## Overview
 **SupportSDK** contains `SupportSDK`, an iOS framework for Boomtown partners. It allows partners to integrate issue creation, notification, and chat in a single `SupportButton` button.
