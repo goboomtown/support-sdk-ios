@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11A83CAF0D06F626D978E8D9 /* Pods_SupportSDK_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE953369B8989321DF2FB1AA /* Pods_SupportSDK_ObjC.framework */; };
+		46A02295232FD942001C5970 /* support_sdk.json in Resources */ = {isa = PBXBuildFile; fileRef = 46A02294232FD941001C5970 /* support_sdk.json */; };
+		46DD31F523E32E3A00A1FF51 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 46DD31F423E32E3900A1FF51 /* Podfile */; };
 		C9A4E3E81C973AC6003BD44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A4E3E71C973AC6003BD44D /* main.m */; };
 		C9A4E3EB1C973AC6003BD44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A4E3EA1C973AC6003BD44D /* AppDelegate.m */; };
 		C9A4E3EE1C973AC6003BD44D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A4E3ED1C973AC6003BD44D /* ViewController.m */; };
@@ -15,21 +18,13 @@
 		C9A4E3F61C973AC6003BD44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A4E3F41C973AC6003BD44D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C922513A1C99B1EB0086621C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		C9A4E3E31C973AC6003BD44D /* SupportSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupportSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1604B1F386493EE7037281AC /* Pods-SupportSDK-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SupportSDK-ObjC.release.xcconfig"; path = "Target Support Files/Pods-SupportSDK-ObjC/Pods-SupportSDK-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		46A02294232FD941001C5970 /* support_sdk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = support_sdk.json; sourceTree = "<group>"; };
+		46A022A52331A277001C5970 /* SupportSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportSDK.framework; sourceTree = "<group>"; };
+		46DD31F423E32E3900A1FF51 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AE953369B8989321DF2FB1AA /* Pods_SupportSDK_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SupportSDK_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A4E3E31C973AC6003BD44D /* SupportSDK-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SupportSDK-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A4E3E71C973AC6003BD44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9A4E3E91C973AC6003BD44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9A4E3EA1C973AC6003BD44D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +34,7 @@
 		C9A4E3F21C973AC6003BD44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9A4E3F51C973AC6003BD44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9A4E3F71C973AC6003BD44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8913AD1DACF54F8BE9A2D71 /* Pods-SupportSDK-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SupportSDK-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-SupportSDK-ObjC/Pods-SupportSDK-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A83CAF0D06F626D978E8D9 /* Pods_SupportSDK_ObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,28 +52,42 @@
 		185416340EEA99B0B79B9159 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE953369B8989321DF2FB1AA /* Pods_SupportSDK_ObjC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE4DDC0C225C97FE4EA7B53D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8913AD1DACF54F8BE9A2D71 /* Pods-SupportSDK-ObjC.debug.xcconfig */,
+				1604B1F386493EE7037281AC /* Pods-SupportSDK-ObjC.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		C9A4E3DA1C973AC6003BD44D = {
 			isa = PBXGroup;
 			children = (
-				185416340EEA99B0B79B9159 /* Frameworks */,
+				46DD31F423E32E3900A1FF51 /* Podfile */,
+				46A022A52331A277001C5970 /* SupportSDK.framework */,
+				46A02294232FD941001C5970 /* support_sdk.json */,
+				C9A4E3E51C973AC6003BD44D /* SupportSDK-ObjC */,
 				C9A4E3E41C973AC6003BD44D /* Products */,
-				C9A4E3E51C973AC6003BD44D /* SupportSDKDemo */,
+				185416340EEA99B0B79B9159 /* Frameworks */,
+				AE4DDC0C225C97FE4EA7B53D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		C9A4E3E41C973AC6003BD44D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9A4E3E31C973AC6003BD44D /* SupportSDKDemo.app */,
+				C9A4E3E31C973AC6003BD44D /* SupportSDK-ObjC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C9A4E3E51C973AC6003BD44D /* SupportSDKDemo */ = {
+		C9A4E3E51C973AC6003BD44D /* SupportSDK-ObjC */ = {
 			isa = PBXGroup;
 			children = (
 				C9A4E3E91C973AC6003BD44D /* AppDelegate.h */,
@@ -89,7 +100,7 @@
 				C9A4E3F71C973AC6003BD44D /* Info.plist */,
 				C9A4E3E61C973AC6003BD44D /* Supporting Files */,
 			);
-			path = SupportSDKDemo;
+			path = "SupportSDK-ObjC";
 			sourceTree = "<group>";
 		};
 		C9A4E3E61C973AC6003BD44D /* Supporting Files */ = {
@@ -103,26 +114,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C9A4E3E21C973AC6003BD44D /* SupportSDKDemo */ = {
+		C9A4E3E21C973AC6003BD44D /* SupportSDK-ObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9A4E3FA1C973AC6003BD44D /* Build configuration list for PBXNativeTarget "SupportSDKDemo" */;
+			buildConfigurationList = C9A4E3FA1C973AC6003BD44D /* Build configuration list for PBXNativeTarget "SupportSDK-ObjC" */;
 			buildPhases = (
-				90FFDFB550FCA0235B963214 /* [CP] Check Pods Manifest.lock */,
+				480A2932ED476D0874BC8806 /* [CP] Check Pods Manifest.lock */,
 				C9A4E3DF1C973AC6003BD44D /* Sources */,
 				C9A4E3E01C973AC6003BD44D /* Frameworks */,
 				C9A4E3E11C973AC6003BD44D /* Resources */,
-				C922513A1C99B1EB0086621C /* Embed Frameworks */,
-				46A022AE2332CACC001C5970 /* Strip Unnecessary Architectures */,
-				464CF6142375E0480055AE9D /* Increment Build Number */,
-				23D26065FF2E096B89451BB7 /* [CP] Embed Pods Frameworks */,
+				F3439B75614B9275C42EE4EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SupportSDKDemo;
+			name = "SupportSDK-ObjC";
 			productName = "ConnectHelp-ObjC";
-			productReference = C9A4E3E31C973AC6003BD44D /* SupportSDKDemo.app */;
+			productReference = C9A4E3E31C973AC6003BD44D /* SupportSDK-ObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C9A4E3DE1C973AC6003BD44D /* Build configuration list for PBXProject "SupportSDKDemo" */;
+			buildConfigurationList = C9A4E3DE1C973AC6003BD44D /* Build configuration list for PBXProject "SupportSDK-ObjC" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -153,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C9A4E3E21C973AC6003BD44D /* SupportSDKDemo */,
+				C9A4E3E21C973AC6003BD44D /* SupportSDK-ObjC */,
 			);
 		};
 /* End PBXProject section */
@@ -163,7 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46DD31F523E32E3A00A1FF51 /* Podfile in Resources */,
 				C9A4E3F61C973AC6003BD44D /* LaunchScreen.storyboard in Resources */,
+				46A02295232FD942001C5970 /* support_sdk.json in Resources */,
 				C9A4E3F31C973AC6003BD44D /* Assets.xcassets in Resources */,
 				C9A4E3F11C973AC6003BD44D /* Main.storyboard in Resources */,
 			);
@@ -172,13 +182,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23D26065FF2E096B89451BB7 /* [CP] Embed Pods Frameworks */ = {
+		480A2932ED476D0874BC8806 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SupportSDK-ObjC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3439B75614B9275C42EE4EF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SupportSDKDemo/Pods-SupportSDKDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SupportSDK-ObjC/Pods-SupportSDK-ObjC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
@@ -207,65 +239,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SupportSDKDemo/Pods-SupportSDKDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		464CF6142375E0480055AE9D /* Increment Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Increment Build Number";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
-		};
-		46A022AE2332CACC001C5970 /* Strip Unnecessary Architectures */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Strip Unnecessary Architectures";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/strip_unnecessary_architectures.sh\n";
-		};
-		90FFDFB550FCA0235B963214 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SupportSDKDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SupportSDK-ObjC/Pods-SupportSDK-ObjC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -409,24 +383,37 @@
 		};
 		C9A4E3FB1C973AC6003BD44D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8913AD1DACF54F8BE9A2D71 /* Pods-SupportSDK-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 2CSY99ZJ94;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/SupportSDKDemo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportSDK-ObjC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CocoaAsyncSocket\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"KissXML\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"XMPPFramework\"",
+					"-framework",
+					"\"libidn\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.goboomtown.supportsdkdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goboomtown.examples.SupportSDK-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -434,24 +421,37 @@
 		};
 		C9A4E3FC1C973AC6003BD44D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1604B1F386493EE7037281AC /* Pods-SupportSDK-ObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 2CSY99ZJ94;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/SupportSDKDemo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportSDK-ObjC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CocoaAsyncSocket\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"KissXML\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"XMPPFramework\"",
+					"-framework",
+					"\"libidn\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.goboomtown.supportsdkdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goboomtown.examples.SupportSDK-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,7 +460,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C9A4E3DE1C973AC6003BD44D /* Build configuration list for PBXProject "SupportSDKDemo" */ = {
+		C9A4E3DE1C973AC6003BD44D /* Build configuration list for PBXProject "SupportSDK-ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9A4E3F81C973AC6003BD44D /* Debug */,
@@ -469,7 +469,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9A4E3FA1C973AC6003BD44D /* Build configuration list for PBXNativeTarget "SupportSDKDemo" */ = {
+		C9A4E3FA1C973AC6003BD44D /* Build configuration list for PBXNativeTarget "SupportSDK-ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9A4E3FB1C973AC6003BD44D /* Debug */,

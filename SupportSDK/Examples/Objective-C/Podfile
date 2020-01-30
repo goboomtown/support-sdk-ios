@@ -1,0 +1,13 @@
+# Support SDK Example
+
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/twilio/cocoapod-specs'
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'SupportSDK-ObjC' do
+  use_frameworks!
+
+  pod 'SupportSDK', '~> 0.9.0'
+end
