@@ -1,4 +1,4 @@
-# Boomtown Support Platform SDK for iOS
+# Boomtown Product Support Platform SDK for iOS
 
 #### Minimum Requirements
 - Xcode 10.2
