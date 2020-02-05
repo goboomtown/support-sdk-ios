@@ -23,6 +23,7 @@
 @class CLLocationManager;
 
 
+
 extern NSString *_Nonnull const kSDKV1Endpoint;
 
 extern NSString *_Nonnull const kStartingBoomtownVideoTitle;
@@ -32,6 +33,21 @@ extern NSString *_Nonnull const BoomtownAPIBaseURL;
 
 extern NSString *_Nonnull const kBroadcastExtensionSetupUIBundleId;
 extern NSString *_Nonnull const kBroadcastExtensionBundleId;
+
+/**
+ Customer information keys
+ */
+extern NSString  *const _Nonnull kCustomerId;
+extern NSString  *const _Nonnull kCustomerExternalId;
+extern NSString  *const _Nonnull kCustomerLocationId;
+extern NSString  *const _Nonnull kCustomerLocationExternalId;
+extern NSString  *const _Nonnull kCustomerLocationMid;
+extern NSString  *const _Nonnull kUserId;
+extern NSString  *const _Nonnull kUserExternalId;
+extern NSString  *const _Nonnull kUserEmail;
+extern NSString  *const _Nonnull kUserPhone;
+
+
 
 @interface Support : NSObject
 
@@ -58,6 +74,7 @@ extern NSString *_Nonnull const kBroadcastExtensionBundleId;
 @property                               BOOL            showSupportWebsite;
 @property                               BOOL            showSupportCallMe;
 @property (strong, nonatomic, nullable) NSString        *callMeButtonText;
+@property (strong, nonatomic, nullable) NSString        *callMeButtonConfirmation;
 @property                               BOOL            supportProactiveEnabled;
 @property                               BOOL            supportScreenShareEnabled;
 @property                               BOOL            supportUnavailable;

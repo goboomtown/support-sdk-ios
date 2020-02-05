@@ -8,6 +8,7 @@
 
 @import UIKit;
 
+
 @class SupportButton;
 
 extern NSString  *const _Nonnull SupportSDKErrorDomain;
@@ -77,6 +78,7 @@ extern NSString  *const _Nonnull SupportSDKErrorDomain;
 IB_DESIGNABLE
 @interface SupportButton : UIView <NSNetServiceDelegate>
 
+
 /**
  The delegate for responses
  */
@@ -91,7 +93,7 @@ IB_DESIGNABLE
 
  @return    YES if configuration was successfully loaded, NO if not
  */
-- (BOOL) loadConfigurationFile:(nonnull NSString *)configFileName customerId:(nullable NSString *)customerId;
+- (BOOL) loadConfigurationFile:(nonnull NSString *)configFileName customerInfo:(nullable NSDictionary *)customerInfo;
 
 /**
 Retrieve and load the desired customer into the Support SDK. This must me done after the settings have been retrieved
