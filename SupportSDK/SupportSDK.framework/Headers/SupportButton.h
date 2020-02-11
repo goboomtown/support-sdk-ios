@@ -103,6 +103,23 @@ Retrieve and load the desired customer into the Support SDK. This must me done a
 - (void) getCustomerWithInformation:(nullable NSDictionary *)customerInformation;
 
 /**
+ Customer information keys
+ 
+ These are the possible keys that can be searched for when attempting to retrieve a customer
+
+ NSString  *const _Nonnull kCustomerId                   = @"members_id";
+ NSString  *const _Nonnull kCustomerExternalId           = @"members_external_id";
+ NSString  *const _Nonnull kCustomerLocationId           = @"members_locations_id";
+ NSString  *const _Nonnull kCustomerLocationExternalId   = @"members_locations_external_id";
+ NSString  *const _Nonnull kCustomerLocationMid          = @"members_locations_mid";
+ NSString  *const _Nonnull kUserId                       = @"members_users_id";
+ NSString  *const _Nonnull kUserExternalId               = @"members_users_external_id";
+ NSString  *const _Nonnull kUserEmail                    = @"members_users_email";
+ NSString  *const _Nonnull kUserPhone                    = @"members_users_phone";
+ */
+
+
+/**
  Advertise the Support SDK service via mDNS
 
  The contents of publicData will be available in the TXT record in clear text. The contents of dataToEncrypt will be available
