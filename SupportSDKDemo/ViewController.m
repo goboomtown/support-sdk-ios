@@ -27,7 +27,7 @@
                                     buttonSize);
 	self.supportButton = [[SupportButton alloc] initWithFrame:buttonFrame];
 	self.supportButton.delegate = self;
-    if ( ![self.supportButton loadConfigurationFile:@"CONFIGURATION FILE NAME" customerId:nil] ) {
+    if ( ![self.supportButton loadConfigurationFile:@"CONFIGURATION FILE NAME" customerInfo:nil] ) {
         NSLog(@"Unable to load configuration file");
     }
     [self.view addSubview:self.supportButton];

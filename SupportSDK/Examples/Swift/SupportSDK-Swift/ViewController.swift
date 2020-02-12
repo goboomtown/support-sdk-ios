@@ -22,7 +22,7 @@ class ViewController: UIViewController, SupportButtonDelegate {
         let button = SupportButton(frame: buttonFrame)
         button.delegate = self;
 
-        if button.loadConfigurationFile("CONFIGURATION FILE NAME", customerId: nil) == false  {
+        if button.loadConfigurationFile("CONFIGURATION FILE NAME", customerInfo: nil) == false  {
             NSLog("Unable to load configuration file")
         }
         return button
