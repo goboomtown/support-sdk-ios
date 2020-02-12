@@ -1,4 +1,4 @@
-# Boomtown Support SDK for iOS (v 1.0)
+# Boomtown Product Support Platform SDK for iOS
 
 #### Minimum Requirements
 - Xcode 10.2
@@ -13,7 +13,7 @@
 - MTBBarcodeScanner
 
 
-A Podfile is included in case you want to use CocoaPods. If so, Support SDK will include these dependencies.
+A Podfile is included in case you want to use CocoaPods. If so, Support SDK will include these dependencies. The Support SDK CocoaPod can be found at https://cocoapods.org/pods/SupportSDK.
 
 ## Overview
 **SupportSDK** contains `SupportSDK`, an iOS framework for Boomtown partners. It allows partners to integrate issue creation, notification, and chat in a single `SupportButton` button.
@@ -42,7 +42,7 @@ The downloaded configuration file may be renamed if desired and should be dragge
 
 ## Usage
 
-_Note:_ Objective-C and Swift examples may be found in the `Examples` folder of this repository
+_Note:_ Objective-C and Swift examples may be found in the `SupportSDK/Examples` folder of this repository
 
 ### Objective-C
 ```Objective-C
