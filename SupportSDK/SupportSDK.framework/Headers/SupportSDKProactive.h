@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SupportSDKProactive : NSObject
 
-- (instancetype)    initWithConfigurationFile:(NSString *)configFileName customerId:(NSString *)customerId;
+- (instancetype)    initWithConfigurationFile:(NSString *)configFileName customerInfo:(nullable NSDictionary *)customerInfo;
 - (BOOL)            loadConfigurationFile:(NSString *)configFileName;
 - (void)            putAppHealthCheck:(NSString *)name
                           checkStatus:(CheckStatus)checkStatus
