@@ -52,6 +52,12 @@
 }
 
 
+- (void) supportButton:(SupportButton *)supportButton displayView:(UIView *)view
+{
+    [self.view addSubview:view];
+}
+
+
 - (void) supportButton:(nonnull SupportButton *)supportButton  displaySupportMenu:(nonnull UIAlertController *)alertController
 {
     if ( self.view.traitCollection.horizontalSizeClass != UIUserInterfaceSizeClassCompact )
@@ -69,7 +75,7 @@
 }
 
 
-- (void) supportButton:(nonnull SupportButton *)supportButton displayIssueViewController:(UIViewController *)viewController
+- (void) supportButton:(nonnull SupportButton *)supportButton displayViewController:(UIViewController *)viewController
 {
 	[self.navigationController pushViewController:viewController animated:YES];
 }

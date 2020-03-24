@@ -52,6 +52,10 @@
     NSLog(@"mDNS service failed to advertise.");
 }
 
+- (void) supportButton:(SupportButton *)supportButton displayView:(UIView *)view
+{
+    [self.view addSubview:view];
+}
 
 - (void) supportButton:(nonnull SupportButton *)supportButton  displaySupportMenu:(nonnull UIAlertController *)alertController
 {
@@ -70,7 +74,7 @@
 }
 
 
-- (void) supportButton:(nonnull SupportButton *)supportButton displayIssueViewController:(UIViewController *)viewController
+- (void) supportButton:(nonnull SupportButton *)supportButton displayViewController:(UIViewController *)viewController
 {
 	[self.navigationController pushViewController:viewController animated:YES];
 }

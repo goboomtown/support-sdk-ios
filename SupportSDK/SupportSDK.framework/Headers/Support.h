@@ -19,6 +19,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BTConnectIssue.h"
+#import "SupportButton.h"
 
 @class CLLocationManager;
 
@@ -60,9 +61,13 @@ extern NSString  *const _Nonnull kUserPhone;
 @property (strong, nonatomic, nullable)	NSString	*membersUsersId;
 @property (strong, nonatomic, nullable)	NSString	*membersLocationsId;
 @property (strong, nonatomic, nullable) NSString    *membersDevicesId;
-@property (strong, nonatomic, nullable) NSString    *currentIssueId;
 @property                               BOOL        isScreenCapture;
 @property                               BOOL        isCloudConfigComplete;
+
+@property (strong, nonatomic, nullable) BTConnectIssue  *currentIssue;
+@property (strong, nonatomic, nullable) NSString        *currentIssueId;
+@property (strong, nonatomic, nullable) BTConnectIssue  *rateableIssue;
+@property (strong, nonatomic, nullable) NSString        *rateableIssueId;
 
 @property (strong, nonatomic, nullable) NSDictionary    *settings;
 @property (strong, nonatomic, nullable) NSString        *supportEmailAddress;
@@ -114,6 +119,9 @@ extern NSString  *const _Nonnull kUserPhone;
                           description:(NSString *_Nullable)description
                               success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
                               failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+
+- (void) displayRatingScreenFromButton:(nonnull SupportButton *)supportButton;
+
 - (NSString *_Nullable)      encodeString:(NSString *_Nonnull)data;
 - (NSDictionary *_Nullable)	extractXmppInformation:(NSString *_Nonnull)xmppData;
 - (void) getCallbackNumberWithSuccess:(void (^_Nonnull)(NSDictionary*_Nonnull))success
@@ -132,9 +140,23 @@ extern NSString  *const _Nonnull kUserPhone;
 - (void) postChecks:(NSArray *_Nonnull)checks
             success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
             failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+
+- (void)            rateIssue:(nonnull NSString *)issueId
+                       rating:(NSUInteger)rating
+                  description:(nullable NSString *)desc
+                      success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
+                      failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+
+- (void)            refreshIssue:(nullable NSString *)issueId;
+
+- (void)            resolveIssue:(nonnull NSString *)issueId
+                         success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
+                         failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+
 - (void)            retrieveKB:(NSString *_Nonnull)id
-success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
-failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+                       success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
+                       failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+
 - (void)            startVideoSessionWithId:(NSString *_Nonnull)id token:(NSString *_Nonnull)token;
 + (NSString *_Nullable) 		stringFromDictionary:(NSDictionary *_Nonnull)dict withKey:(NSString *_Nonnull)key;
 - (void)            stopVideoSession;

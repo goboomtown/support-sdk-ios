@@ -47,10 +47,14 @@ class ViewController: UIViewController, SupportButtonDelegate {
     }
 
 
-    func supportButton(_ supportButton: SupportButton, displayIssueViewController viewController: UIViewController) {
+    func supportButton(_ supportButton: SupportButton, displayViewController viewController: UIViewController) {
         show(viewController, sender: supportButton)
     }
-    
+ 
+    func supportButton(_ supportButton: SupportButton, displayView view: UIView) {
+        self.view.addSubview(view)
+    }
+
     func supportButton(_ supportButton: SupportButton, displaySupportMenu alertController: UIAlertController) {
         present(alertController, animated: true, completion: nil)
         if let popoverController = alertController.popoverPresentationController {

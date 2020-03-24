@@ -107,10 +107,11 @@ enum {
 @property (nonatomic, strong)	NSString	*remote_id;
 @property (nonatomic, strong)	NSString	*resolution;
 @property (nonatomic, strong)	NSString	*scheduled_time;
-@property (nonatomic, strong)	NSString	*status;
+@property (nonatomic, strong)	NSNumber	*status;
 @property (nonatomic, strong)	NSString	*type;
 @property (nonatomic, strong)	NSString	*updated;
 @property (nonatomic, strong)	NSString	*xmpp_data;
+@property                       BOOL        isRated;
 
 
 - (NSDictionary *)  dict;

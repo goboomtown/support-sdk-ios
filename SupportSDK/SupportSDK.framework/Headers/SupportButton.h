@@ -21,9 +21,17 @@ extern NSString  *const _Nonnull SupportSDKErrorDomain;
 @required
 
 /**
- Called when the issue view controller is ready to be displayed. This will display tracking and chat related to the issue
+ Called when a view is ready to be displayed.
+ This will display the support menu or rating screen
  */
-- (void) supportButton:(nonnull SupportButton *)supportButton  displayIssueViewController:(nonnull UIViewController *)viewController;
+- (void) supportButton:(nonnull SupportButton *)supportButton  displayView:(nonnull UIView *)view;
+
+
+/**
+ Called when a view controller is ready to be displayed.
+ This will display tracking and chat related to an issue, or a knowledge base article
+ */
+- (void) supportButton:(nonnull SupportButton *)supportButton  displayViewController:(nonnull UIViewController *)viewController;
 
 /**
  Called when the generated support action sheet is ready to be displayed. This will display the available support options
@@ -84,6 +92,16 @@ IB_DESIGNABLE
  */
 @property (nullable, strong, nonatomic)	id			<SupportButtonDelegate> delegate;
 
+
+/**
+ Use support view rather than popup for menu selection
+ */
+@property                               BOOL        useSupportView;
+
+/**
+ Force a click of Support button, typically without displaying it
+ */
+- (void) click;
 
 /**
  Load the Support SDK configuration from the provided JSON file
