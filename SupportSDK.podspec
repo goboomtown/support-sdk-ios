@@ -9,16 +9,13 @@ Pod::Spec.new do |s|
     :type => "Commercial",
     :text => "Copyright 2020 Boomtown. All rights reserved."
   }
-  s.author       = { "Larry Borsato" => "lborsato@goboomtown.com" }
-  # s.source       = { :http    => "" }
-  s.source       = { :git => "https://github.com/goboomtown/support-sdk-ios.git", :tag => "#{s.version}" }
+  s.author                = { "Larry Borsato" => "lborsato@goboomtown.com" }
+  s.source                = { :git => "https://github.com/goboomtown/support-sdk-ios.git", :tag => "#{s.version}" }
   s.libraries             = "c++"
-  # s.public_header_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
-  # s.source_files = "SupportSDK/SupportSDK.framework/Headers/*.h"
-  s.vendored_frameworks = "SupportSDK/SupportSDK.framework"
+  s.vendored_frameworks   = "SupportSDK.framework"
   s.requires_arc          = true
   s.xcconfig              = { 'OTHER_LDFLAGS' => '-ObjC' }
-  s.dependency 'AFNetworking', '~> 3.0'
+  s.dependency 'AFNetworking', '~> 4.0'
   s.dependency 'XMPPFramework', '~> 4.0'
   s.dependency 'SVProgressHUD'
   s.dependency 'TwilioVideo', '2.8.1'
