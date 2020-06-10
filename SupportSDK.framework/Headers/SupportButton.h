@@ -12,8 +12,10 @@
 @class SupportButton;
 
 typedef enum MenuStyle : NSInteger {
+    NoMenu      = 0,
     Menu        = 1,
-    Button      = 2
+    Button      = 2,
+    IconList    = 3
 } MenuStyle;
 
 extern NSString  *const _Nonnull SupportSDKErrorDomain;

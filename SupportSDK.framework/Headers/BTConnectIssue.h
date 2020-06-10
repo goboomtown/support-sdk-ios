@@ -112,6 +112,7 @@ enum {
 @property (nonatomic, strong)	NSString	*updated;
 @property (nonatomic, strong)	NSString	*xmpp_data;
 @property                       BOOL        isRated;
+@property                       BOOL        isTemporary;
 
 
 - (NSDictionary *)  dict;

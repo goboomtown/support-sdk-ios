@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		VtjeOxqjdxCpop/SzPL5XM+Zv14=
+		17ADOYDivLTHytDIEQTWXYkxt34=
 		</data>
 		<key>BTChatViewController.nib/objects-11.0+.nib</key>
 		<data>
@@ -168,6 +168,14 @@
 		<data>
 		DN2J7VuqU/+IxjYnqTtUE4AhnWU=
 		</data>
+		<key>Boomtown Logo - Color.png</key>
+		<data>
+		q7m2ofnBmzRvtQmuffNRW5bmNJQ=
+		</data>
+		<key>Boomtown Logo - White.png</key>
+		<data>
+		5OvpAhXZgGsI/XCy5eFTTaDbUYU=
+		</data>
 		<key>BoomtownChat.storyboardc/7xM-i7-Kq6-view-OBs-lY-RGW.nib</key>
 		<data>
 		JZNNAtDvqfeznxvCTBu4TGaLHbQ=
@@ -186,11 +194,11 @@
 		</data>
 		<key>CallMeViewController.nib/objects-11.0+.nib</key>
 		<data>
-		8efuT0VWlHXglbJZAtFkzD5G6Uk=
+		dc2NRFpkdZq/ZdIGo600Cv9ZLMQ=
 		</data>
 		<key>CallMeViewController.nib/runtime.nib</key>
 		<data>
-		UOHl5c5ONSeU6WIEICHdvG63X98=
+		25KeN3XXBtRUfJsCjXiW+jEWif8=
 		</data>
 		<key>Camera.png</key>
 		<data>
@@ -222,11 +230,15 @@
 		</data>
 		<key>Headers/BTConnectIssue.h</key>
 		<data>
-		8bKH7Q45Ng9h2wZriRDtXNU63K8=
+		rtVfL+FJG6s9shzimn4MNvJQVpM=
 		</data>
 		<key>Headers/Check.h</key>
 		<data>
 		qkhu+f8U4N1VZfT1lLzQ2FymKhY=
+		</data>
+		<key>Headers/LoginView.h</key>
+		<data>
+		Bwv2P+kkNkEBicT303e/dmRrAU0=
 		</data>
 		<key>Headers/Support.h</key>
 		<data>
@@ -234,11 +246,11 @@
 		</data>
 		<key>Headers/SupportButton.h</key>
 		<data>
-		Tp55KT/aBPdswrzCAT7kxzxJTBo=
+		Y276mT1BcjgBOBe8sdqYrPna0KQ=
 		</data>
 		<key>Headers/SupportSDK.h</key>
 		<data>
-		nd3SgdL81G0jMvOL75vqRRhwVyQ=
+		FTjz2xuykciLceS8CXLDlhD5zks=
 		</data>
 		<key>Headers/SupportSDKProactive.h</key>
 		<data>
@@ -246,7 +258,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		h2o1DRez3Lrsk+9hKbcR4F/8qpE=
+		XP+Yrh8SBm4YaiVgTm72Q0iuG8A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -797,6 +809,14 @@
 		<data>
 		VxJUQZlSs7owjxKQvfZiHYLJb14=
 		</data>
+		<key>iOS-chat-bubble-left.png</key>
+		<data>
+		tXUIzRodVJTQ0tZnBzCcw4D3NKw=
+		</data>
+		<key>iOS-chat-bubble-right.png</key>
+		<data>
+		Mr3F61IGL8U/vu3nZW4NwmlYTLE=
+		</data>
 		<key>icon-canceled-sm-white.png</key>
 		<data>
 		9v2ulXEjxetKkrK9tHS7uTw2FGU=
@@ -1295,11 +1315,11 @@
 		</data>
 		<key>thumbs_down.png</key>
 		<data>
-		xJENw+EBjnJaPigDXfNA1R0IlmM=
+		48S8SR7im/2WOd/0TgBBOy08Yys=
 		</data>
 		<key>thumbs_up.png</key>
 		<data>
-		4/zD7CZS+wi760UzErb/e/HtqdY=
+		xN7PB3I/VIEV3u47JRZ210EOW+g=
 		</data>
 		<key>tongue.png</key>
 		<data>
@@ -1600,11 +1620,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VtjeOxqjdxCpop/SzPL5XM+Zv14=
+			17ADOYDivLTHytDIEQTWXYkxt34=
 			</data>
 			<key>hash2</key>
 			<data>
-			K3GqRtgBeskorxmvSTedQ6tAO5xs8zRR3/S8hZGl68I=
+			6NQa+8r7jxIH9jn5b7VmJx2OEi3zxXJU2y+zhPIaj0w=
 			</data>
 		</dict>
 		<key>BTChatViewController.nib/objects-11.0+.nib</key>
@@ -2047,6 +2067,28 @@
 			q2y3qIKSSOvZwVmA6PwY0uMRrqw6+gXQGBcVJeyFD1U=
 			</data>
 		</dict>
+		<key>Boomtown Logo - Color.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			q7m2ofnBmzRvtQmuffNRW5bmNJQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			2LFzf6Epxvw0IAytwZsDSITRujHAfJkUUVK5YLD4F34=
+			</data>
+		</dict>
+		<key>Boomtown Logo - White.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5OvpAhXZgGsI/XCy5eFTTaDbUYU=
+			</data>
+			<key>hash2</key>
+			<data>
+			/n/vwfbUvFZ7Fl5QoEazhDnxOdKknycrX5pUFk3fqUc=
+			</data>
+		</dict>
 		<key>BoomtownChat.storyboardc/7xM-i7-Kq6-view-OBs-lY-RGW.nib</key>
 		<dict>
 			<key>hash</key>
@@ -2095,22 +2137,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8efuT0VWlHXglbJZAtFkzD5G6Uk=
+			dc2NRFpkdZq/ZdIGo600Cv9ZLMQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ds9mDt++WGJghHTQ8ufoyyJWFtfKSw9oEByyfB6Ctn4=
+			5zxNld2QRH1u7pwMnput/bLxkydeRVCvthMKTnAIszc=
 			</data>
 		</dict>
 		<key>CallMeViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UOHl5c5ONSeU6WIEICHdvG63X98=
+			25KeN3XXBtRUfJsCjXiW+jEWif8=
 			</data>
 			<key>hash2</key>
 			<data>
-			eLRMikLP/9Vn+vdksIxaFUsQAoVzIRZhWUnEVaNP03U=
+			ujIwCiRLUIMfMysdJUzeXPJQYuJAtNq5RpGMgJdWXqw=
 			</data>
 		</dict>
 		<key>Camera.png</key>
@@ -2194,11 +2236,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8bKH7Q45Ng9h2wZriRDtXNU63K8=
+			rtVfL+FJG6s9shzimn4MNvJQVpM=
 			</data>
 			<key>hash2</key>
 			<data>
-			RUmSaFPQPtz1HKHew0Bajt1ylUGCYU0ZGVVjrUYk5Bs=
+			THIZG/XlE/3zT53QztRI0agG9lphw5bo/lXEAYH5tYE=
 			</data>
 		</dict>
 		<key>Headers/Check.h</key>
@@ -2210,6 +2252,17 @@
 			<key>hash2</key>
 			<data>
 			LmYdT6TtP3i0Ltur7d2Gi9XIVwd7DQR/b/7GKqgk1AE=
+			</data>
+		</dict>
+		<key>Headers/LoginView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Bwv2P+kkNkEBicT303e/dmRrAU0=
+			</data>
+			<key>hash2</key>
+			<data>
+			XbMu5gSXVYpVPh86saK8QTlXLA8UqEpBiWb1BCrh1TM=
 			</data>
 		</dict>
 		<key>Headers/Support.h</key>
@@ -2227,22 +2280,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Tp55KT/aBPdswrzCAT7kxzxJTBo=
+			Y276mT1BcjgBOBe8sdqYrPna0KQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			h9fEbJnS7zWAhcz7BcaUs9Zxb5rK9lFhi9/snCxhL7A=
+			T7Ya+Hcuqn7EhOMCviefYPpOYDykzVNR832RM7nGv70=
 			</data>
 		</dict>
 		<key>Headers/SupportSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nd3SgdL81G0jMvOL75vqRRhwVyQ=
+			FTjz2xuykciLceS8CXLDlhD5zks=
 			</data>
 			<key>hash2</key>
 			<data>
-			1PmDWaAV03t3HCdHKFAi+VR3F5taC9NqV/1jMBVs1vY=
+			MUJaM7dH8zjJlLP9Rojz3UBeMZCwrubcVhc2Cn/kJDw=
 			</data>
 		</dict>
 		<key>Headers/SupportSDKProactive.h</key>
@@ -3754,6 +3807,28 @@
 			96VLluRFnWmo1gc5+UvK9ng1rn345EcSMBvrZjDbT+U=
 			</data>
 		</dict>
+		<key>iOS-chat-bubble-left.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tXUIzRodVJTQ0tZnBzCcw4D3NKw=
+			</data>
+			<key>hash2</key>
+			<data>
+			bhj4VbYx9b2Mg/3I9AWOxl+ukVVzNhhYfTyCjHXu1kE=
+			</data>
+		</dict>
+		<key>iOS-chat-bubble-right.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Mr3F61IGL8U/vu3nZW4NwmlYTLE=
+			</data>
+			<key>hash2</key>
+			<data>
+			MmjJB7Lirssdt/7qQ+JLEK5q76TYJLPTnvODesTt0N0=
+			</data>
+		</dict>
 		<key>icon-canceled-sm-white.png</key>
 		<dict>
 			<key>hash</key>
@@ -5122,22 +5197,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xJENw+EBjnJaPigDXfNA1R0IlmM=
+			48S8SR7im/2WOd/0TgBBOy08Yys=
 			</data>
 			<key>hash2</key>
 			<data>
-			tnVVQW4FuyQm59m6h+R0/abCRufwdejVQ/Q6S5Ao1FI=
+			xZuBDGZhS+Unf0wYn1rmuUPwdkMh/Qkm+6uuFyzSqwY=
 			</data>
 		</dict>
 		<key>thumbs_up.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4/zD7CZS+wi760UzErb/e/HtqdY=
+			xN7PB3I/VIEV3u47JRZ210EOW+g=
 			</data>
 			<key>hash2</key>
 			<data>
-			HocaZ/zJqj4bOedTsMjv4bbieFIvg9UuLuG1AmNmX78=
+			siL/gmcpAcxs+TP7EArAgsajw0LmmVvC3aibESbiu/o=
 			</data>
 		</dict>
 		<key>tongue.png</key>
