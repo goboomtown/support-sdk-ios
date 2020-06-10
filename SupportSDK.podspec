@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SupportSDK"
-  s.version      = "0.9.3"
+  s.version      = "1.0.0"
   s.summary      = "Boomtown Support SDK"
   s.description  = "The Boomtown Product Support Platform SDK lets you embed a complete product support platform in your iOS applications."
   s.homepage     = "https://developers.goboomtown.com"
