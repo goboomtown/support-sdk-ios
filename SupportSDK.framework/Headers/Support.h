@@ -23,6 +23,9 @@
 @class CLLocationManager;
 @class SupportButton;
 @class KBViewModel;
+@class BTFormModel;
+@class HistoryEntryModel;
+@class HistoryViewModel;
 
 extern NSString *_Nonnull const kSDKV1Endpoint;
 
@@ -56,9 +59,22 @@ extern NSString  *const _Nonnull kUserPhone;
 
 - (void) supportUpdateKBWithModel:(nonnull KBViewModel *)kbViewModel;
 - (void) supportSearchKBWithModel:(nonnull KBViewModel *)kbViewModel;
+- (void) supportUpdateFormWithModel:(nonnull BTFormModel *)formModel;
+- (void) supportUpdateForms;
 - (void) supportSearchKBFailed;
 
 @end
+
+@protocol HistoryDelegate <NSObject>
+
+@required
+
+@optional
+
+- (void) supportUpdateHistory:(nonnull HistoryViewModel *)historyViewModel;
+
+@end
+
 
 
 
@@ -76,6 +92,9 @@ extern NSString  *const _Nonnull kUserPhone;
 @property                               BOOL        isScreenCapture;
 @property                               BOOL        isCloudConfigComplete;
 
+@property (strong, nonatomic, nullable) id<SupportDelegate> formsDelegate;
+@property (strong, nonatomic, nullable) id<HistoryDelegate> historyDelegate;
+
 @property (strong, nonatomic, nullable) BTConnectIssue  *currentIssue;
 @property (strong, nonatomic, nullable) NSString        *currentIssueId;
 @property (strong, nonatomic, nullable) BTConnectIssue  *rateableIssue;
@@ -91,6 +110,9 @@ extern NSString  *const _Nonnull kUserPhone;
 @property                               BOOL            showSupportWebsite;
 @property                               BOOL            showSupportKnowledgeBase;
 @property                               BOOL            showSupportCallMe;
+@property                               BOOL            showSupportForms;
+@property                               BOOL            showSupportHistory;
+@property (strong, nonatomic, nullable) NSArray         *supportForms;
 @property (strong, nonatomic, nullable) NSString        *callMeButtonText;
 @property (strong, nonatomic, nullable) NSString        *callMeButtonConfirmation;
 @property                               BOOL            supportProactiveEnabled;
@@ -98,8 +120,13 @@ extern NSString  *const _Nonnull kUserPhone;
 @property                               BOOL            supportUnavailable;
 @property (strong, nonatomic, nullable) NSString        *supportUnavailableSummary;
 
-@property (strong, nonatomic, nullable) NSString        *xmppdata;
-@property (strong, nonatomic, nullable) KBViewModel     *kbViewModel;
+@property (strong, nonatomic, nullable) NSString            *xmppdata;
+@property (strong, nonatomic, nullable) KBViewModel         *kbViewModel;
+@property (strong, nonatomic, nullable) KBViewModel         *kbSearchViewModel;
+@property (strong, nonatomic, nullable) HistoryViewModel    *historyViewModel;
+
+@property (strong, nonatomic, nullable) NSMutableArray<BTFormModel *>       *forms;
+@property (strong, nonatomic, nonnull)  NSMutableArray<HistoryEntryModel *> *historyEntries;
 
 
 + (Support *_Nonnull)sharedInstance;
@@ -120,6 +147,7 @@ extern NSString  *const _Nonnull kUserPhone;
             success:(void (^_Nonnull)(NSDictionary *_Nonnull))success
             failure:(void (^_Nonnull)(NSDictionary *_Nonnull))failure;
 
+- (nullable BTFormModel *) currentForm;
 
 - (BTConnectIssue *_Nullable)   loadCurrentIssue;
 - (void)                        saveCurrentIssue:(BTConnectIssue *_Nonnull)issue;
@@ -143,6 +171,14 @@ extern NSString  *const _Nonnull kUserPhone;
 - (void)            getCustomer:(NSDictionary *_Nonnull)customerInformation
                         success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
                         failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+- (void)            getForm:(nullable NSString *)id
+success:(void (^_Nullable)(NSDictionary *_Nullable))success
+failure:(void (^_Nullable)(NSDictionary *_Nullable))failure;
+
+- (void) getForms:(nullable id<SupportDelegate>)sender;
+
+- (void) getHistory;
+
 - (void) getKB:(nullable id<SupportDelegate>)sender;
 - (void) getIssue:(NSString *_Nonnull)issueId
           success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
@@ -155,6 +191,11 @@ extern NSString  *const _Nonnull kUserPhone;
 - (void) postChecks:(NSArray *_Nonnull)checks
             success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
             failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+
+- (void)            putForm:(BTFormModel * _Nonnull)formModel
+                    success:(void (^ _Nonnull)(NSDictionary*))success
+                    failure:(void (^ _Nonnull)(NSDictionary*))failure;
+
 
 - (void)            rateIssue:(nonnull NSString *)issueId
                        rating:(NSUInteger)rating

@@ -90,6 +90,7 @@ enum {
 @property (nonatomic, strong)	NSString	*arrival_time;
 @property (nonatomic, strong)	NSString	*category;
 @property (nonatomic, strong)	NSString	*created;
+@property (nonatomic, strong)   NSString    *resolved;
 @property (nonatomic, strong)	NSString	*departure_time;
 @property (nonatomic, strong)	NSString	*details;
 @property (nonatomic, strong)	NSString	*enroute_time;
@@ -107,16 +108,24 @@ enum {
 @property (nonatomic, strong)	NSString	*remote_id;
 @property (nonatomic, strong)	NSString	*resolution;
 @property (nonatomic, strong)	NSString	*scheduled_time;
+@property (nonatomic, strong)   NSString    *owner_user_avatar;
 @property (nonatomic, strong)	NSNumber	*status;
+@property (nonatomic, strong)   NSNumber    *rating;
 @property (nonatomic, strong)	NSString	*type;
 @property (nonatomic, strong)	NSString	*updated;
 @property (nonatomic, strong)	NSString	*xmpp_data;
+@property (nonatomic, strong)   NSDictionary    *transcripts;
 @property                       BOOL        isRated;
 @property                       BOOL        isTemporary;
 
 
 - (NSDictionary *)  dict;
+- (NSString *)      displayStatus;
 - (id)              initWithDictionary:(NSDictionary *)dict;
+- (BOOL)            isClosed;
+- (BOOL)            isOpen;
+- (BOOL)            isResolved;
+
 
 @end
 

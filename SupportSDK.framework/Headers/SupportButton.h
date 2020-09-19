@@ -10,6 +10,7 @@
 
 
 @class SupportButton;
+@class Support;
 
 typedef enum MenuStyle : NSInteger {
     NoMenu      = 0,
@@ -112,7 +113,7 @@ IB_DESIGNABLE
 - (void) click;
 
 /**
- Load the Support SDK configuration from the provided JSON file
+ Load the Support SDK configuration from the provided JSON file in the app bundle
 
  @param     configFileName      the file name of the configuration file (i.e support_sdk.json)
  @param     customerId          an id (emai, MID, etc) to identify a customer
@@ -120,6 +121,17 @@ IB_DESIGNABLE
  @return    YES if configuration was successfully loaded, NO if not
  */
 - (BOOL) loadConfigurationFile:(nonnull NSString *)configFileName customerInfo:(nullable NSDictionary *)customerInfo;
+
+
+/**
+ Load the Support SDK configuration from the provided JSON string
+
+ @param     json                the configuration information JSON
+ @param     customerId          an id (emai, MID, etc) to identify a customer
+
+ @return    YES if configuration was successfully loaded, NO if not
+ */
+- (BOOL) loadConfigurationJSON:(NSString *)json customerInfo:(NSDictionary *)customerInfo;
 
 /**
 Retrieve and load the desired customer into the Support SDK. This must me done after the settings have been retrieved
