@@ -114,6 +114,7 @@ enum {
 @property (nonatomic, strong)	NSString	*type;
 @property (nonatomic, strong)	NSString	*updated;
 @property (nonatomic, strong)	NSString	*xmpp_data;
+@property (nonatomic, strong)   NSString    *comm_id;
 @property (nonatomic, strong)   NSDictionary    *transcripts;
 @property                       BOOL        isRated;
 @property                       BOOL        isTemporary;
