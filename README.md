@@ -1,14 +1,14 @@
 # Boomtown Product Support Platform SDK for iOS
 
 #### Minimum Requirements
-- Xcode 10.2
-- iOS 9.0
+- Xcode 11
+- iOS 11.0
 
 #### Dependencies
 -	AFNetworking 3.0
 -	XMPPFramework 4.0
 -	SVProgressHUD
-- TwilioVideo 2.8.1
+- TwilioVideo 3.7.1
 -	iOS-Color-Picker
 - MTBBarcodeScanner
 
@@ -72,6 +72,16 @@ if button.loadConfigurationFile("support_sdk.json", customerId:nil) == false  {
 self.view.addSubview(button)
 
 ```
+
+## Branding
+
+The Support Button provides an Appearance class which exposes two convenience methods to control the look of the Support SDK. The usage is shown in the sample code below.
+
+```
+setIconColor(NSInteger color);
+setTextColor(NSInteger color);
+```
+
 
 ## Acknowledgements
 

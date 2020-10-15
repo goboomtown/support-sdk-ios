@@ -133,7 +133,7 @@ IB_DESIGNABLE
 
  @return    YES if configuration was successfully loaded, NO if not
  */
-- (BOOL) loadConfigurationJSON:(NSString *)json customerInfo:(NSDictionary *)customerInfo;
+- (BOOL) loadConfigurationJSON:(NSString *_Nonnull)json customerInfo:(NSDictionary *_Nullable)customerInfo;
 
 /**
 Retrieve and load the desired customer into the Support SDK. This must me done after the settings have been retrieved

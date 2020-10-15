@@ -120,6 +120,8 @@ extern NSString  *const _Nonnull kUserPhone;
 @property                               BOOL            supportUnavailable;
 @property (strong, nonatomic, nullable) NSString        *supportUnavailableSummary;
 
+@property (strong, nonatomic, nullable) NSString        *downloadSessionToken;
+
 @property (strong, nonatomic, nullable) NSString            *xmppdata;
 @property (strong, nonatomic, nullable) KBViewModel         *kbViewModel;
 @property (strong, nonatomic, nullable) KBViewModel         *kbSearchViewModel;
@@ -193,8 +195,8 @@ failure:(void (^_Nullable)(NSDictionary *_Nullable))failure;
             failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
 
 - (void)            putForm:(BTFormModel * _Nonnull)formModel
-                    success:(void (^ _Nonnull)(NSDictionary*))success
-                    failure:(void (^ _Nonnull)(NSDictionary*))failure;
+                    success:(void (^ _Nonnull)(NSDictionary*_Nonnull))success
+                    failure:(void (^ _Nonnull)(NSDictionary*_Nonnull))failure;
 
 
 - (void)            rateIssue:(nonnull NSString *)issueId

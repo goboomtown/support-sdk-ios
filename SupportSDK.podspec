@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "SupportSDK"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "Boomtown Support SDK"
   s.description  = "The Boomtown Product Support Platform SDK lets you embed a complete product support platform in your iOS applications."
   s.homepage     = "https://developers.goboomtown.com"
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "11.0"
   s.license      = {
     :type => "Commercial",
     :text => "Copyright 2020 Boomtown. All rights reserved."
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.dependency 'AFNetworking', '~> 4.0'
   s.dependency 'XMPPFramework', '~> 4.0'
   s.dependency 'SVProgressHUD'
-  s.dependency 'TwilioVideo', '2.8.1'
+  s.dependency 'TwilioVideo', '3.7.1'
   s.dependency 'iOS-Color-Picker'
   s.dependency 'MTBBarcodeScanner'
 end
