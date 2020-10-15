@@ -16,8 +16,10 @@ Pod::Spec.new do |s|
   s.requires_arc          = true
   s.xcconfig              = {
     'OTHER_LDFLAGS' => '-ObjC',
-    'IPHONEOS_DEPLOYMENT_TARGET' => '11.0'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
    }
+  # s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  # s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.dependency 'AFNetworking', '~> 4.0'
   s.dependency 'XMPPFramework', '~> 4.0'
   s.dependency 'SVProgressHUD'
