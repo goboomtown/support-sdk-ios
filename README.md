@@ -5,7 +5,7 @@
 - iOS 11.0
 
 #### Dependencies
--	AFNetworking 3.0
+-	AFNetworking 4.0
 -	XMPPFramework 4.0
 -	SVProgressHUD
 - TwilioVideo 3.7.1

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SupportSDK"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "Boomtown Support SDK"
   s.description  = "The Boomtown Product Support Platform SDK lets you embed a complete product support platform in your iOS applications."
   s.homepage     = "https://developers.goboomtown.com"
@@ -14,7 +14,10 @@ Pod::Spec.new do |s|
   s.libraries             = "c++"
   s.vendored_frameworks   = "SupportSDK.framework"
   s.requires_arc          = true
-  s.xcconfig              = { 'OTHER_LDFLAGS' => '-ObjC' }
+  s.xcconfig              = {
+    'OTHER_LDFLAGS' => '-ObjC',
+    'IPHONEOS_DEPLOYMENT_TARGET' => '11.0'
+   }
   s.dependency 'AFNetworking', '~> 4.0'
   s.dependency 'XMPPFramework', '~> 4.0'
   s.dependency 'SVProgressHUD'
