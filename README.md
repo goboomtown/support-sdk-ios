@@ -82,6 +82,49 @@ setIconColor(NSInteger color);
 setTextColor(NSInteger color);
 ```
 
+The Appearance class also allows you to configure the support menu, the knowledge base folder icon, or the chat button images using code similar to the example below.
+
+```
+- (void) setDefaultAppearance
+{
+    [Appearance setup];
+    NSString* const frameworkBundleID  = @"com.goboomtown.supportsdk";
+    NSBundle* bundle = [NSBundle bundleWithIdentifier:frameworkBundleID];
+    NSDictionary *defaultMenuConfiguration = @{
+        kMenuTextChat:      NSLocalizedString(@"Chat with Us", nil),
+        kMenuIconChat:      [UIImage imageNamed:@"a-chat" inBundle:bundle compatibleWithTraitCollection:nil],
+
+        kMenuTextCallMe:    self.support.callMeButtonText,
+        kMenuIconCallMe:    [UIImage imageNamed:@"phone-call" inBundle:bundle compatibleWithTraitCollection:nil],
+
+        kMenuTextKnowledge: NSLocalizedString(@"Search Knowledge", nil),
+        kMenuIconKnowledge: [UIImage imageNamed:@"book-bookmark" inBundle:bundle compatibleWithTraitCollection:nil],
+
+        kMenuTextWeb:       NSLocalizedString(@"Web Support", nil),
+        kMenuIconWeb:       [UIImage imageNamed:@"globe" inBundle:bundle compatibleWithTraitCollection:nil],
+
+        kMenuTextEmail:     NSLocalizedString(@"Email Support", nil),
+        kMenuIconEmail:     [UIImage imageNamed:@"letter" inBundle:bundle compatibleWithTraitCollection:nil],
+
+        kMenuTextPhone:     NSLocalizedString(@"Phone Support", nil),
+        kMenuIconPhone:     [UIImage imageNamed:@"book-bookmark" inBundle:bundle compatibleWithTraitCollection:nil],
+
+        kMenuTextForms:     NSLocalizedString(@"Forms", nil),
+        kMenuIconForms:     [UIImage imageNamed:@"form" inBundle:bundle compatibleWithTraitCollection:nil],
+
+        kMenuTextHistory:   NSLocalizedString(@"History", nil),
+        kMenuIconHistory:   [UIImage imageNamed:@"customer-alt" inBundle:bundle compatibleWithTraitCollection:nil],
+
+        kMenuBorderColor:   Appearance.homeTextColor
+    };
+    [Appearance setMenuConfiguration:defaultMenuConfiguration];
+
+    [Appearance setKbFolderIcon:[UIImage imageNamed:@"book-bookmark" inBundle:bundle compatibleWithTraitCollection:nil]];
+    [Appearance setChatAttachmentButtonImage:[UIImage imageNamed:@"paperclip" inBundle:bundle compatibleWithTraitCollection:nil]];
+    [Appearance setChatSendButtonImage:[UIImage imageNamed:@"send" inBundle:bundle compatibleWithTraitCollection:nil]];
+
+}
+```
 
 ## Acknowledgements
 
