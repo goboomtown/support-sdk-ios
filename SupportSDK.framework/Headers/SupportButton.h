@@ -13,10 +13,11 @@
 @class Support;
 
 typedef enum MenuStyle : NSInteger {
-    NoMenu      = 0,
-    Menu        = 1,
-    Button      = 2,
-    IconList    = 3
+    NoMenu          = 0,
+    Menu            = 1,
+    Button          = 2,
+    IconList        = 3,
+    IconListExit    = 4
 } MenuStyle;
 
 extern NSString  *const _Nonnull SupportSDKErrorDomain;
@@ -66,6 +67,11 @@ extern NSString  *const _Nonnull SupportSDKErrorDomain;
 - (void) supportButtonDidCancelIssue:(nonnull SupportButton *)supportButton;
 - (void) supportButton:(nonnull SupportButton *)supportButton didFailToCancelIssueWithError:(nonnull NSError *)error;
 
+/**
+ Called when user requests exit from main menu
+ */
+- (void) supportButtonDidRequestExit:(nonnull SupportButton *)supportButton;
+
 
 /**
  Called when settings were sucessfully retrieved
@@ -107,6 +113,8 @@ IB_DESIGNABLE
 
 @property                               BOOL        isUndecorated;
 
+@property                               BOOL        isSideBySideForms;
+
 /**
  Use support view rather than popup for menu selection
  */
@@ -116,6 +124,21 @@ IB_DESIGNABLE
  Force a click of Support button, typically without displaying it
  */
 - (void) click;
+
+
+/**
+ Configure the Support SDK button with new appearance parameters
+ 
+ @param     appearanceJSON
+ */
+- (void) configureWithJSON:(NSString *_Nullable) appearanceJSON;
+
+
+/**
+ Reset support button
+ */
+
+- (void) reset;
 
 /**
  Load the Support SDK configuration from the provided JSON file in the app bundle

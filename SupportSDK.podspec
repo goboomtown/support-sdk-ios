@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SupportSDK"
-  s.version      = "1.2.2"
+  s.version      = "1.2.16"
   s.summary      = "Boomtown Support SDK"
   s.description  = "The Boomtown Product Support Platform SDK lets you embed a complete product support platform in your iOS applications."
   s.homepage     = "https://developers.goboomtown.com"
@@ -17,9 +17,11 @@ Pod::Spec.new do |s|
   s.xcconfig              = {
     'OTHER_LDFLAGS' => '-ObjC',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-   }
-  # s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  # s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  }
+
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
   s.dependency 'AFNetworking', '~> 4.0'
   s.dependency 'XMPPFramework', '~> 4.0'
   s.dependency 'SVProgressHUD'
