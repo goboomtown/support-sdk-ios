@@ -73,57 +73,115 @@ self.view.addSubview(button)
 
 ```
 
-## Branding
+## Appearance Configuration
 
-The Support Button provides an Appearance class which exposes two convenience methods to control the look of the Support SDK. The usage is shown in the sample code below.
-
-```
-setIconColor(NSInteger color);
-setTextColor(NSInteger color);
-```
-
-The Appearance class also allows you to configure the support menu, the knowledge base folder icon, or the chat button images using code similar to the example below.
+Much of the application (menus, icons, and colors currently) can be configured using a JSON file as follows:
 
 ```
-- (void) setDefaultAppearance
+[self.supportButton configureWithJSON:appearanceJSONString];
+```
+
+This is the default JSON.
+
+```
 {
-    [Appearance setup];
-    NSString* const frameworkBundleID  = @"com.goboomtown.supportsdk";
-    NSBundle* bundle = [NSBundle bundleWithIdentifier:frameworkBundleID];
-    NSDictionary *defaultMenuConfiguration = @{
-        kMenuTextChat:      NSLocalizedString(@"Chat with Us", nil),
-        kMenuIconChat:      [UIImage imageNamed:@"a-chat" inBundle:bundle compatibleWithTraitCollection:nil],
-
-        kMenuTextCallMe:    self.support.callMeButtonText,
-        kMenuIconCallMe:    [UIImage imageNamed:@"phone-call" inBundle:bundle compatibleWithTraitCollection:nil],
-
-        kMenuTextKnowledge: NSLocalizedString(@"Search Knowledge", nil),
-        kMenuIconKnowledge: [UIImage imageNamed:@"book-bookmark" inBundle:bundle compatibleWithTraitCollection:nil],
-
-        kMenuTextWeb:       NSLocalizedString(@"Web Support", nil),
-        kMenuIconWeb:       [UIImage imageNamed:@"globe" inBundle:bundle compatibleWithTraitCollection:nil],
-
-        kMenuTextEmail:     NSLocalizedString(@"Email Support", nil),
-        kMenuIconEmail:     [UIImage imageNamed:@"letter" inBundle:bundle compatibleWithTraitCollection:nil],
-
-        kMenuTextPhone:     NSLocalizedString(@"Phone Support", nil),
-        kMenuIconPhone:     [UIImage imageNamed:@"book-bookmark" inBundle:bundle compatibleWithTraitCollection:nil],
-
-        kMenuTextForms:     NSLocalizedString(@"Forms", nil),
-        kMenuIconForms:     [UIImage imageNamed:@"form" inBundle:bundle compatibleWithTraitCollection:nil],
-
-        kMenuTextHistory:   NSLocalizedString(@"History", nil),
-        kMenuIconHistory:   [UIImage imageNamed:@"customer-alt" inBundle:bundle compatibleWithTraitCollection:nil],
-
-        kMenuBorderColor:   Appearance.homeTextColor
-    };
-    [Appearance setMenuConfiguration:defaultMenuConfiguration];
-
-    [Appearance setKbFolderIcon:[UIImage imageNamed:@"book-bookmark" inBundle:bundle compatibleWithTraitCollection:nil]];
-    [Appearance setChatAttachmentButtonImage:[UIImage imageNamed:@"paperclip" inBundle:bundle compatibleWithTraitCollection:nil]];
-    [Appearance setChatSendButtonImage:[UIImage imageNamed:@"send" inBundle:bundle compatibleWithTraitCollection:nil]];
-
+    "menu":
+    {
+        "chat": {
+            "text": "Chat with Us",
+            "icon": "a_chat"
+        },
+        "callme":
+        {
+            "text": "Call Me",
+            "icon": "phone_call"
+        },
+        "knowledge":
+        {
+            "text": "Search Knowledge",
+            "icon": "book_bookmark"
+        },
+        "web":
+        {
+            "text": "Web Support",
+            "icon": "globe"
+        },
+        "email":
+        {
+            "text": "Email Support",
+            "icon": "letter"
+        },
+        "phone":
+        {
+            "text": "Phone Support",
+            "icon": "phone"
+        },
+        "forms":
+        {
+            "text": "Forms",
+            "icon": "form"
+        },
+        "history":
+        {
+            "text": "History",
+            "icon": "customer_alt"
+        },
+        "exit":
+        {
+            "text": "Exit"
+        }
+    },
+    "icons":
+    {
+        "kbFolderIcon": "book-bookmark",
+        "chatAttachmentButtonImage": "paperclip.png",
+        "chatSendButtonImage": "send.png"
+    },
+    "colors":
+    {
+        "navigationBarColor": "#f2f2f2",
+        "iconColor": "#EF5E0D",
+        "buttonColor": "#EF5E0D",
+        "lineColor": "#E0E0E0",
+        "textColor": "#4F4F4F",
+        "homeIconColor": "#EF5E0D",
+        "homeLineColor": "#E0E0E0",
+        "homeTextColor": "#4F4F4F",
+        "homeSelectedColor": "#EBEBEB",
+        "callMeHeaderTextColor": "#4F4F4F",
+        "callMeLabelTextColor": "#626363",
+        "callMeHintTextColor": "#ACACAC",
+        "callMeButtonTextColor": "#ACACAC",
+        "callMeButtonBackgroundColor": "#1AA8A8",
+        "ratingHeaderTextColor": "#4F4F4F",
+        "ratingLabelTextColor": "#626363",
+        "ratingHintTextColor": "#ACACAC",
+        "ratingButtonTextColor": "#ACACAC",
+        "ratingButtonBackgroundColor": "#1AA8A8",
+        "chatRefidTextColor": "#4f4f4f",
+        "chatNavBarColor": "#f2f2f2",
+        "chatSendButtonEnabledColor": "#626363",
+        "chatSendButtonDisabledColor": "#ACACAC",
+        "chatTimeStampColor": "#ACACAC",
+        "chatActionButtonTextColor": "#838383",
+        "chatActionButtonSelectedTextColor": "#ffffff",
+        "chatActionButtonBorderColor": "#E0E0E0",
+        "chatIconColor": "#838383",
+        "kbFolderNameTextColor": "#303030",
+        "kbFolderL0BackgroundColor": "#F3F8F8",
+        "kbTextColor": "#303030",
+        "menuBorderColor": "#E0E0E0"
+    }
 }
+```
+
+If you only want to configure a general color scheme you need only set the following colors:
+
+```
+iconColor
+buttonColor
+lineColor
+textColor
 ```
 
 ## Acknowledgements
