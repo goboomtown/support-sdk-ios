@@ -20,6 +20,16 @@ typedef enum MenuStyle : NSInteger {
     IconListExit    = 4
 } MenuStyle;
 
+
+static NSString * const _Nonnull kSupportSDKNotification         = @"com.goboomtown.support_sdk_notitication";
+
+static NSString * const _Nonnull kEventChatStarted               = @"com.goboomtown.event.chat_started";
+static NSString * const _Nonnull kEventChatEnded                 = @"com.goboomtown.event.chat_ended";
+
+static NSString * const _Nonnull kRequestSupportSDKExit          = @"com.goboomtown.request.support_sdk_exit";
+static NSString * const _Nonnull kRequestChatExit                = @"com.goboomtown.request.chat_exit";
+static NSString * const _Nonnull kRequestChatExitResolvingIssue  = @"com.goboomtown.event.chat_exit_resolve_issue";
+
 extern NSString  *const _Nonnull SupportSDKErrorDomain;
 
 /**
@@ -131,7 +141,7 @@ IB_DESIGNABLE
  
  @param     appearanceJSON
  */
-- (void) configureWithJSON:(NSString *_Nullable) appearanceJSON;
+- (NSError * _Nullable) configureWithJSON:(NSString *_Nullable) appearanceJSON;
 
 
 /**
@@ -144,7 +154,7 @@ IB_DESIGNABLE
  Load the Support SDK configuration from the provided JSON file in the app bundle
 
  @param     configFileName      the file name of the configuration file (i.e support_sdk.json)
- @param     customerId          an id (emai, MID, etc) to identify a customer
+ @param     customerId          an NSDictionary containing key/value id pairs (emai, MID, etc) to identify a customer
 
  @return    YES if configuration was successfully loaded, NO if not
  */
@@ -154,19 +164,40 @@ IB_DESIGNABLE
 /**
  Load the Support SDK configuration from the provided JSON string
 
- @param     json                the configuration information JSON
- @param     customerId          an id (emai, MID, etc) to identify a customer
+ @param     json                the configuration information JSON as a string
+ @param     customerId          an NSDictionary containing key/value id pairs (emai, MID, etc) to identify a customer
 
  @return    YES if configuration was successfully loaded, NO if not
  */
-- (BOOL) loadConfigurationJSON:(NSString *_Nonnull)json customerInfo:(NSDictionary *_Nullable)customerInfo;
+- (BOOL) loadConfigurationJSON:(NSString *_Nonnull)json customerInfo:(NSDictionary * _Nullable)customerInfo;
+
+
+/**
+ Load the Support SDK configuration from the provided JSON string
+
+ @param     json                the configuration information JSON
+ @param     customerInfoJson    an id (emai, MID, etc) to identify a customer
+
+ @return    YES if configuration was successfully loaded, NO if not
+ */
+
+- (BOOL) loadConfigurationJSON:(NSString * _Nonnull)json customerInfoJSON:(NSString * _Nullable)customerInfoJSON;
+
+
+/**
+Retrieve and load the desired customer into the Support SDK. This must me done after the settings have been retrieved
+
+@param     customerInformationJSON       a JSON string of possible keys (i.e. customer_email) and values (i.e. an email address)
+*/
+- (void) getCustomerWithJSON:(NSString * _Nullable)customerInfoJSON;
+
 
 /**
 Retrieve and load the desired customer into the Support SDK. This must me done after the settings have been retrieved
 
 @param     customerInformation       a dictionary of possible keys (i.e. customer_email) and values (i.e. an email address)
 */
-- (void) getCustomerWithInformation:(nullable NSDictionary *)customerInformation;
+- (void) getCustomerWithInformation:(NSDictionary * _Nullable)customerInformation;
 
 /**
  Customer information keys
