@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BTConnectIssue.h"
+#import "BTIssue.h"
 #import "Appearance.h"
 
 @class CLLocationManager;
@@ -84,6 +84,7 @@ extern NSString  *const _Nonnull kUserPhone;
 @property (strong, nonatomic, nullable) NSString    *sdkName;
 @property (strong, nonatomic, nullable) NSString    *endpoint;
 @property (strong, nonatomic, nullable) NSString    *supportSDKVersion;
+@property (strong, nonatomic, nullable) NSString    *supportSDKBuild;
 @property (strong, nonatomic, nullable) NSString    *osVersion;
 @property (strong, nonatomic, nullable) NSString    *providerId;
 @property (strong, nonatomic, nullable)	NSString	*membersId;
@@ -96,9 +97,9 @@ extern NSString  *const _Nonnull kUserPhone;
 @property (strong, nonatomic, nullable) id<SupportDelegate> formsDelegate;
 @property (strong, nonatomic, nullable) id<HistoryDelegate> historyDelegate;
 
-@property (strong, nonatomic, nullable) BTConnectIssue  *currentIssue;
+@property (strong, nonatomic, nullable) BTIssue  *currentIssue;
 @property (strong, nonatomic, nullable) NSString        *currentIssueId;
-@property (strong, nonatomic, nullable) BTConnectIssue  *rateableIssue;
+@property (strong, nonatomic, nullable) BTIssue  *rateableIssue;
 @property (strong, nonatomic, nullable) NSString        *rateableIssueId;
 
 @property (strong, nonatomic, nullable) NSDictionary    *settings;
@@ -133,6 +134,7 @@ extern NSString  *const _Nonnull kUserPhone;
 
 @property                               BOOL                isKBRequested;
 @property                               BOOL                isHistoryRequested;
+@property                               BOOL                isFormsRequested;
 @property                               BOOL                isUndecorated;
 @property                               BOOL                isSideBySideForms;
 
@@ -161,8 +163,8 @@ extern NSString  *const _Nonnull kUserPhone;
 
 - (nullable BTFormModel *) currentForm;
 
-- (BTConnectIssue *_Nullable)   loadCurrentIssue;
-- (void)                        saveCurrentIssue:(BTConnectIssue *_Nonnull)issue;
+- (BTIssue *_Nullable)   loadCurrentIssue;
+- (void)                        saveCurrentIssue:(BTIssue *_Nonnull)issue;
 - (void)                        clearCurrentIssue;
 
 - (void)                cancelIssue:(NSString *_Nonnull)issueId
@@ -188,18 +190,19 @@ extern NSString  *const _Nonnull kUserPhone;
 success:(void (^_Nullable)(NSDictionary *_Nullable))success
 failure:(void (^_Nullable)(NSDictionary *_Nullable))failure;
 
-- (void) getForms:(nullable id<SupportDelegate>)sender;
-
 - (void) getHistory;
 
 - (void) getKB:(nullable id<SupportDelegate>)sender;
 - (void) getIssue:(NSString *_Nonnull)issueId
           success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
           failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
-//- (NSDictionary *)  getServerFailureResponseForOperation:(NSURLSessionTask *)operation;
 - (NSString *_Nonnull)      getServerFailureMessageForOperation:(NSURLSessionTask *_Nonnull)operation;
 - (void)            getSettingsWithSuccess:(void (^_Nonnull)(NSDictionary*_Nonnull))success
                                    failure:(void (^_Nonnull)(NSDictionary*_Nonnull))failure;
+- (void) getSupportForms;
+
+- (BOOL) isMemberSet;
+
 - (BOOL) isProactiveEnabled;
 - (void) postChecks:(NSArray *_Nonnull)checks
             success:(void (^_Nonnull)(NSDictionary*_Nonnull))success
