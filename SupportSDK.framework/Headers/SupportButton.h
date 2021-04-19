@@ -22,6 +22,7 @@ typedef enum MenuStyle : NSInteger {
 } MenuStyle;
 
 
+
 //static NSString * const _Nonnull kSupportSDKNotification         = @"com.goboomtown.support_sdk_notitication";
 //
 //static NSString * const _Nonnull kEventChatStarted               = @"com.goboomtown.event.chat_started";

@@ -125,6 +125,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property ( readonly)                     UIColor *navigationBarBackgroundColor;
 @property ( readonly)                     UIColor *navigationBarIconColor;
 
+@property ( readonly)                     NSString  *menuStyle;
 @property ( readonly)                     NSString  *menuHeading;
 @property ( readonly)                     CGFloat   menuTextSize;
 @property ( readonly)                     NSString  *menuTextStyle;
