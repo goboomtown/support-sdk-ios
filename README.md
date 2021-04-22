@@ -8,7 +8,7 @@
 -	AFNetworking 4.0
 -	XMPPFramework 4.0
 -	SVProgressHUD
-- TwilioVideo 3.7.1
+- TwilioVideo 4.4.0
 -	iOS-Color-Picker
 - MTBBarcodeScanner
 
