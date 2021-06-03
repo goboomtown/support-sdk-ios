@@ -28,10 +28,10 @@ For chat to work, **SupportSDK** requires you specify the obtain the configurati
 
 ```
 {
-  "apiHost": "https://api.thinkrelay.com",
+  "apiHost": "https://api.goboomtown.com",
   "integrationId": "xxxxxxx",
   "apiKey": "xxxxxxxxxxxxxxxxxxxxxxxxxx",
-  "buttonURL":"https://api.thinkrelay.com/resources/images/sdk_button.png",
+  "buttonURL":"https://api.goboomtown.com/resources/images/sdk_button.png",
   "partnerToken": "xxxxxxxxxxxxx",
   "privateKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 }
@@ -89,17 +89,30 @@ self.view.addSubview(button)
 
 This file enables communication with the server and configures the available features.
 
-## Menu Types
+## Menu Style
 
-The second parameter of loadConfigurationFromJSON() is the desired menu type as per the following list:
+The menu style is configured in the menuAppearance section of the appearance JSON like this:
 
 ```
-NoMenu: 0,
-Menu: 1,
-Button: 2,
-IconList: 3,
-IconListExit: 4,
+"menuAppearance":
+{
+  "style": "iconlist",
+...
+}
+
 ```
+The style value may be one of the following:
+
+```
+"nomenu"
+"menu"
+"button"
+"iconlist"
+"iconlistexit"
+```
+
+If no value is set the default is iconlist.
+
 
 ## Customer Configuration
 
@@ -141,6 +154,7 @@ This is the default JSON.
   },
   "menuAppearance":
   {
+    "style": "iconlist",
     "heading": "Support",
     "textSize": "20",
     "textStyle": "bold",
