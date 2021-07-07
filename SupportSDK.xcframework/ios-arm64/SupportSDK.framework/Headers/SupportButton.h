@@ -132,6 +132,16 @@ IB_DESIGNABLE
  */
 @property                               BOOL        useSupportView;
 
+
+/**
+ Determine if video components are unavailable
+ 
+ @return    YES if no, otherwise no
+ */
+
+- (BOOL) isVideoUnavailable;
+
+
 /**
  Force a click of Support button, typically without displaying it
  */
@@ -159,6 +169,12 @@ IB_DESIGNABLE
  @param request     the event request
  */
 - (void) sendRequest:(nonnull NSString *)request;
+
+
+/*
+ Display settings
+ */
+- (void) settings;
 
 
 /**

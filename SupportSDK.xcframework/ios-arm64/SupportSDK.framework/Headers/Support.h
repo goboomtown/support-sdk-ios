@@ -108,13 +108,16 @@ extern NSString  *const _Nonnull kUserPhone;
 @property (strong, nonatomic, nullable) NSString        *supportPhoneNumber;
 @property (strong, nonatomic, nullable) NSString        *supportWebsite;
 @property (strong, nonatomic, nullable) NSURL           *supportWebsiteURL;
-@property                               BOOL            showSupportEmail;
-@property                               BOOL            showSupportPhone;
-@property                               BOOL            showSupportWebsite;
-@property                               BOOL            showSupportKnowledgeBase;
-@property                               BOOL            showSupportCallMe;
-@property                               BOOL            showSupportForms;
-@property                               BOOL            showSupportHistory;
+@property                               BOOL            chatEnabled;
+@property                               BOOL            callmeEnabled;
+@property                               BOOL            kbEnabled;
+@property                               BOOL            websiteEnabled;
+@property                               BOOL            emailEnabled;
+@property                               BOOL            phoneEnabled;
+@property                               BOOL            formsEnabled;
+@property                               BOOL            historyEnabled;
+@property                               BOOL            journeysEnabled;
+
 @property (strong, nonatomic, nullable) NSArray         *supportForms;
 @property (strong, nonatomic, nullable) NSString        *callMeButtonText;
 @property (strong, nonatomic, nullable) NSString        *callMeButtonConfirmation;
@@ -122,6 +125,7 @@ extern NSString  *const _Nonnull kUserPhone;
 @property                               BOOL            supportScreenShareEnabled;
 @property                               BOOL            supportUnavailable;
 @property (strong, nonatomic, nullable) NSString        *supportUnavailableSummary;
+@property (strong, nonatomic, nullable) NSDictionary    *advancedConfiguration;
 
 @property (strong, nonatomic, nullable) NSString        *downloadSessionToken;
 
@@ -194,6 +198,8 @@ success:(void (^_Nullable)(NSDictionary *_Nullable))success
 failure:(void (^_Nullable)(NSDictionary *_Nullable))failure;
 
 - (void) getHistory;
+
+- (void) getJourneysWithCompletion:(void (^)(void))completion;
 
 - (void) getKB:(nullable id<SupportDelegate>)sender;
 - (void) getIssue:(NSString *_Nonnull)issueId
