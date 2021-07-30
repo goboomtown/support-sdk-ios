@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SupportSDK/Support.h>
+
 
 @class BarcodeViewController;
 @protocol BarcodeViewControllerDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SettingsViewController : UITableViewController <UITableViewDelegate, BarcodeViewControllerDelegate>
+@interface SettingsViewController : UITableViewController <UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, BarcodeViewControllerDelegate>
+
+@property Support *support;
+
+- (void) changeDeveloperMode;
+- (BOOL) isDeveloperMode;
 
 @end
 

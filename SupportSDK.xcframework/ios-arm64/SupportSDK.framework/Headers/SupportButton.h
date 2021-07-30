@@ -12,6 +12,7 @@
 @class SupportButton;
 @class Support;
 @class EventManager;
+@protocol SupportDelegate;
 
 typedef enum MenuStyle : NSInteger {
     NoMenu          = 0,
@@ -110,7 +111,7 @@ extern NSString  *const _Nonnull SupportSDKErrorDomain;
 
 
 IB_DESIGNABLE
-@interface SupportButton : UIView <NSNetServiceDelegate>
+@interface SupportButton : UIView <NSNetServiceDelegate, SupportDelegate>
 
 
 /**
@@ -178,6 +179,16 @@ IB_DESIGNABLE
 
 
 /**
+ Intialize the support button
+ 
+ @param frame   the desired frame for the button
+ 
+ @return    the new button instance
+ */
+- (nullable instancetype) initWithFile:(nullable NSString *)filename customerInfo:(nullable NSDictionary *)customerInfo;
+
+
+/**
  Load the Support SDK configuration from the provided JSON file in the app bundle
 
  @param     configFileName      the file name of the configuration file (i.e support_sdk.json)
@@ -241,6 +252,7 @@ Retrieve and load the desired customer into the Support SDK. This must me done a
  NSString  *const _Nonnull kUserEmail                    = @"members_users_email";
  NSString  *const _Nonnull kUserPhone                    = @"members_users_phone";
  */
+
 
 
 /**
