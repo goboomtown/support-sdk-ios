@@ -9,5 +9,5 @@ platform :ios, '11.0'
 target 'SupportSDKDemo' do
   use_frameworks!
 
-pod 'SupportSDK', '~> 1.3.14'
+pod 'SupportSDK', '~> 1.3.15'
 end
