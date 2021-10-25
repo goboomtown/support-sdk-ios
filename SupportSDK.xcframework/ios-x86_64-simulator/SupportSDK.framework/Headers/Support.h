@@ -135,6 +135,7 @@ extern NSString  *const _Nonnull kUserPhone;
 
 @property (strong, nonatomic, nullable) NSDictionary    *settings;
 @property (strong, nonatomic, nullable) NSString        *partnerTeam;
+@property (strong, nonatomic, nullable) NSString        *sponsorTeam;
 @property (strong, nonatomic, nullable) NSString        *routeTo;
 @property (strong, nonatomic, nullable) NSString        *supportEmailAddress;
 @property (strong, nonatomic, nullable) NSString        *supportPhoneNumber;

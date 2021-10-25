@@ -38,7 +38,7 @@
 		C9B4A9F41C9C4F1B0025885C = {
 			isa = PBXGroup;
 			children = (
-				C9B4A9FF1C9C4F1B0025885C /* SupportSDK-Swift */,
+				C9B4A9FF1C9C4F1B0025885C /* SupportApp */,
 				C9B4A9FE1C9C4F1B0025885C /* Products */,
 				ED5B4D714B85CFBCFD7A8614 /* Frameworks */,
 			);
@@ -52,7 +52,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C9B4A9FF1C9C4F1B0025885C /* SupportSDK-Swift */ = {
+		C9B4A9FF1C9C4F1B0025885C /* SupportApp */ = {
 			isa = PBXGroup;
 			children = (
 				C9B4AA001C9C4F1B0025885C /* AppDelegate.swift */,
@@ -62,7 +62,7 @@
 				C9B4AA091C9C4F1B0025885C /* LaunchScreen.storyboard */,
 				C9B4AA0C1C9C4F1B0025885C /* Info.plist */,
 			);
-			path = "SupportSDK-Swift";
+			path = SupportApp;
 			sourceTree = "<group>";
 		};
 		ED5B4D714B85CFBCFD7A8614 /* Frameworks */ = {
